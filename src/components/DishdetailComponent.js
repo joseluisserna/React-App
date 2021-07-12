@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
+//Function to render the name, picture, name and description of the dishes using cards... from reactstrap
 function RenderDish({ dish }) {
   if (dish != null) {
     return (
@@ -19,6 +20,7 @@ function RenderDish({ dish }) {
   }
 }
 
+//Function to render the comments of the dishes using list-unstyled
 function RenderComments({ comment }) {
   if (comment.length > 0) {
     var listComment = comment.map((com) => {
@@ -49,6 +51,7 @@ function RenderComments({ comment }) {
   }
 }
 
+//Rendering the description and comments of the dishes using functional components, and using props from MainComponent
 const DishDetail = (props) => {
   if (props.dish != null) {
     return (
